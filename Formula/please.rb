@@ -1,8 +1,8 @@
 class Please < Formula
   desc "Fast, agentic terminal assistant powered by AI"
   homepage "https://github.com/Gabriel-Feang/please"
-  url "https://github.com/Gabriel-Feang/please/archive/refs/tags/v0.2.1.tar.gz"
-  sha256 "ac491c13ba18d7c1586083ce1ecaddb1ef2f595f2948568e4e524ff6c264814c"
+  url "https://github.com/Gabriel-Feang/please/archive/refs/tags/v0.2.2.tar.gz"
+  sha256 "91ee519e3806c1b0fbee0fbf3e592a8d9341a6e7833d46bd40914609b4958926"
   license "MIT"
   head "https://github.com/Gabriel-Feang/please.git", branch: "main"
 
