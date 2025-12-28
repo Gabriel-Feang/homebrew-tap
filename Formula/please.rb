@@ -8,6 +8,7 @@ class Please < Formula
 
   depends_on "go" => :build
   depends_on "fd"
+  depends_on "ollama"
   depends_on "ripgrep"
   depends_on "tree"
 
@@ -20,19 +21,25 @@ class Please < Formula
 
   def caveats
     <<~EOS
-      To get started, configure your OpenRouter API key:
-        please -setup
+      To get started, choose your AI backend:
 
-      Get your API key at: https://openrouter.ai/keys
+      Option 1: Local AI with Ollama (no API key needed)
+        please -ollama
+
+      Option 2: Cloud AI with OpenRouter
+        please -setup
+        Get your API key at: https://openrouter.ai/keys
 
       Usage:
         please <prompt>     Start a new conversation
         hmm <follow-up>     Continue the conversation
 
-      New in v0.2.0:
+      Commands:
         please -help        Show all commands and tools
         please -tools       Toggle tools on/off
         please -model       Switch AI model
+        please -ollama      Use local Ollama models
+        please -openrouter  Use OpenRouter cloud models
         please -newtool     Create custom tools via AI
     EOS
   end
