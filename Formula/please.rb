@@ -7,8 +7,8 @@ class Please < Formula
   head "https://github.com/Gabriel-Feang/please.git", branch: "main"
 
   depends_on "go" => :build
-  depends_on "ripgrep"
   depends_on "fd"
+  depends_on "ripgrep"
   depends_on "tree"
 
   def install
@@ -41,8 +41,8 @@ class Please < Formula
     # Test help flag works
     assert_match "agentic terminal assistant", shell_output("#{bin}/please -help")
     # Test aliases exist
-    assert_predicate bin/"pls", :exist?
-    assert_predicate bin/"plz", :exist?
-    assert_predicate bin/"hmm", :exist?
+    assert_path_exists bin/"hmm"
+    assert_path_exists bin/"pls"
+    assert_path_exists bin/"plz"
   end
 end
