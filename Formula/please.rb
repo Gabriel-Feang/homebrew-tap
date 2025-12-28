@@ -7,6 +7,9 @@ class Please < Formula
   head "https://github.com/Gabriel-Feang/please.git", branch: "main"
 
   depends_on "go" => :build
+  depends_on "ripgrep"
+  depends_on "fd"
+  depends_on "tree"
 
   def install
     system "go", "build", *std_go_args(ldflags: "-s -w"), "-o", bin/"please"
